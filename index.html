@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="preload" href="assets/images/logo.png" as="image" type="image/png">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <title>Naitik Kushwaha | Full-Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ✅ CLICK & MAILTO HARD FIX (ADDED, NOTHING REMOVED) -->
+    <style>
+        /* Background layers should never catch clicks */
+        .background-overlay,
+        .animated-background,
+        #bg-canvas,
+        #stars1,
+        #stars2,
+        #stars3 {
+            pointer-events: none !important;
+            z-index: 0 !important;
+        }
+
+        /* Overlay div must not block links */
+        .page-item {
+            pointer-events: none !important;
+        }
+
+        /* Anchor must always be on top */
+        .page-item-each {
+            position: relative;
+            z-index: 9999 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Snowfall Background Animation -->
+    <section class="animated-background">
+        <div id="stars1"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </section>
+    <!-- End of Snowfall Background Animation -->
+
+    <div class="min-h-full flex-h-center" id="background_div">
+        <input type="hidden" value="https://bio.link" id="app-url">
+        <input type="hidden" value="null" id="is-featured">
+        <canvas id="bg-canvas" class="background-overlay"></canvas>
+
+        <div class="mt-48 page-full-wrap relative">
+            <input type="hidden" value="creator-page" id="page-type">
+
+            <img class="display-image m-auto"
+                 data-src="assets/images/logo.png"
+                 src="assets/images/logo.png"
+                 alt="Naitik Kushwaha - Full-Stack Developer" />
+
+            <h2 class="page-title page-text-color page-text-font mt-16 text-center">
+                Vornix Developers
+            </h2>
+
+            <div class="mt-24">
+
+                <!-- LinkedIn -->
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener noreferrer"
+                       class="page-item-each py-10 flex-both-center"
+                       href="https://www.linkedin.com/in/vornix-developers/">
+                        <img src="assets/images/linkedin.png" class="link-each-image" alt="LinkedIn">
+                        <span class="item-title text-center">LinkedIn</span>
+                    </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener noreferrer"
+                       class="page-item-each py-10 flex-both-center"
+                       href="https://github.com/vornixdevelopers">
+                        <img src="assets/images/github.png" class="link-each-image" alt="GitHub">
+                        <span class="item-title text-center">GitHub</span>
+                    </a>
+                </div>
+
+                <!-- Instagram -->
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener noreferrer"
+                       class="page-item-each py-10 flex-both-center"
+                       href="https://www.instagram.com/vornixdevelopers/">
+                        <img src="assets/images/instagram.png" class="link-each-image" alt="Instagram">
+                        <span class="item-title text-center">Instagram</span>
+                    </a>
+                </div>
+
+                <!-- Vornix Developers Website -->
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener noreferrer"
+                       class="page-item-each py-10 flex-both-center"
+                       href="https://vornixdevelopers.com">
+                        <img src="assets/images/vornix.png" class="link-each-image" alt="Vornix">
+                        <span class="item-title text-center">
+                            Vornix Developers Website
+                        </span>
+                    </a>
+                </div>
+
+                <!-- ✅ Vornix Developers Email (NOW WORKS) -->
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a class="page-item-each py-10 flex-both-center"
+                       href="mailto:vornixdevelopers@gmail.com">
+                        <img src="assets/images/email.png" class="link-each-image" alt="Email">
+                        <span class="item-title text-center">
+                            vornixdevelopers@gmail.com
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
